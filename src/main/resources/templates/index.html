@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Share</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <section class="upload-container">
+
+        <div class="drop-zone">
+
+            <div class="icon-container">
+
+                <img src="/images/upload.svg" alt="File" class="center" draggable="false">
+                <img src="/images/upload.svg" alt="File" class="left" draggable="false">
+                <img src="/images/upload.svg" alt="File" class="right" draggable="false">
+            </div>
+            <input type="file" name="file" id="fileInput">
+            <div class="title"> Drop your files here or,<span class="browseBtn">browse</span></div>
+
+        </div>
+
+        <div class="progress-container">
+
+            <div class="bg-progress"></div>
+
+                <div class="inner-container">
+                    <div class="title">Uploading...</div>
+
+                    <div class="percent-container"><span id="percent">0</span>%</div>
+                    
+                    <div class="progress-bar"></div>
+                    
+                </div>
+
+         </div>
+    
+    	<div class="sharing-container">
+    		<p class="expire"> Link expire in 24 hrs </p>
+    		
+    		<div class="input-container">
+    			
+    			<input type="text" id="fileURL" readonly/>
+    			<img src="/images/copy-icon.svg" id="copyBtn" alt="copy-icon" />
+    			
+    		</div>
+    	</div>
+    
+    	<div class="email-container">
+            <p class="expire">or Send Via Email</p>
+            <form action="" method="POST" id="emailForm" >
+
+                <div class="field">
+                    <label for="sender">Your Email </label>
+                    <input type="email" name="sender" id="sender" required>
+                
+                </div>
+                
+                <div class="field">
+                    <label for="reciver">Reciver's Email </label>
+                    <input type="email" name="reciver" id="reciver" required>
+                
+                </div>
+
+                <button type="submit">Send</button>
+
+
+            </form>
+
+        </div>
+
+		<div class="toast">Alert toast here</div>
+		
+	</section>
+	
+	<div class="image-container"></div>
+	
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
