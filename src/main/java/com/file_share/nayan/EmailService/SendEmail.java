@@ -27,9 +27,9 @@ public class SendEmail {
 	private static long fileSize;
 	
 	@Value("${EMAIL_ID}")
-	private  String email_id;
+	private static String email_id;
 	@Value("${PASSWORD}")
-	private String password;
+	private static String password;
 	
 	
 	public static void setShareLink(String shareLink) {
