@@ -32,6 +32,18 @@ public class SendEmail {
 	 static String password;
 	
 	
+	public static void setEmail_id(String email_id) {
+		SendEmail.email_id = email_id;
+	}
+
+
+	public static void setPassword(String password) {
+		SendEmail.password = password;
+	}
+
+
+	
+	
 	public static void setShareLink(String shareLink) {
 		SendEmail.shareLink = shareLink;
 	}
