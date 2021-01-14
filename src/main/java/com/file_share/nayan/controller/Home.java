@@ -88,6 +88,8 @@ public class Home {
 	 @PostMapping(value="/upload-file/send")
 	 	public ResponseEntity<?> sendEmail(@RequestBody EmailDetails emailDetails) {
 			
+			System.out.println("++++++++++++++++++++ email_id "+email_id+" password "+password);
+			
 			SendEmail.setEmail_id(email_id);
 		 
 		 	SendEmail.setPassword(password);
