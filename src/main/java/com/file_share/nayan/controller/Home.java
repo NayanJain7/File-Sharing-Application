@@ -100,7 +100,7 @@ public class Home {
 		 
 		  SendEmail.setFileSize(uploadFileResponse.getSize());
 		  SendEmail.setShareLink(uploadFileResponse.getShareLink());
-		  System.out.println("getEmail to "+emailDetails.getEmailTo()+" getEmail from is "+emailDetails.getEmailFrom());
+		  System.out.println("-----------------> getEmail to "+emailDetails.getEmailTo()+" getEmail from is ------------->"+emailDetails.getEmailFrom());
 		boolean isSendMail = SendEmail.sendMail(emailDetails.getEmailTo(), emailDetails.getEmailFrom());
 		
 		if(isSendMail) {
@@ -158,17 +158,8 @@ public class Home {
 	    }
 	   
 	
-	   
+		  
 		 
-		  
-		  @GetMapping("/showVar") public String show() {
-		  System.out.println("-----------------------");
-			  
-		  
-		  
-		  return SendEmail.showDetails();
-		  
-		  }
 		 
 
 }
