@@ -81,7 +81,7 @@ public class SendEmail {
 			
 			mimeMessage.setFrom(email_id);
 			
-			mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+			mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(email_id));
 			
 			mimeMessage.setSubject(subject);
 			
