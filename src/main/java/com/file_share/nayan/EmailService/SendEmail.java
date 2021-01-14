@@ -26,8 +26,10 @@ public class SendEmail {
 	private static String shareLink;
 	private static long fileSize;
 	
-	private String EMAIL_ID;
-	private String PASSWORD;
+	@Value("${EMAIL_ID}")
+	private  String email_id;
+	@Value("${PASSWORD}")
+	private String password;
 	
 	
 	public static void setShareLink(String shareLink) {
@@ -62,7 +64,7 @@ public class SendEmail {
 
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication(EMAIL_ID,PASSWORD);
+				return new PasswordAuthentication(email_id,password);
 			}
 			
 		});
