@@ -80,9 +80,18 @@ public class Home {
 	                .collect(Collectors.toList());
 	    }
 	 
+	 @Value("${EMAIL_ID}")
+	  String email_id;
+	 @Value("${PASSWORD}")
+	 String password;
 	
 	 @PostMapping(value="/upload-file/send")
 	 	public ResponseEntity<?> sendEmail(@RequestBody EmailDetails emailDetails) {
+			
+			SendEmail.setEmail_id(email_id);
+		 
+		 	SendEmail.setPassword(password);
+			
 		 
 		 
 		  UploadFileResponse uploadFileResponse = fileRepo.findById(emailDetails.getUuid()).get();
