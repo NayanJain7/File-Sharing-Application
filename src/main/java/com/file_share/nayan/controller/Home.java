@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -147,5 +148,18 @@ public class Home {
 	   
 	
 	   
+		  @Value("${EMAIL_ID}") 
+			String name;
+	 @Value("${PASSWORD}") 
+			String name2;
+		  
+		  @GetMapping("/showVar") public String show() {
+		  System.out.println("-----------------------");
+		  
+		  
+		  return name+" "+name2;
+		  
+		  }
+		 
 
 }
