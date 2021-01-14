@@ -36,7 +36,7 @@ public class SendEmail {
 		SendEmail.shareLink = shareLink;
 	}
 	
-	public String showDetails(){
+	public static String showDetails(){
 		return "Email is "+email_id+" Password is "+password;
 	}
 
