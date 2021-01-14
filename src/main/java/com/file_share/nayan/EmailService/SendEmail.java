@@ -3,6 +3,8 @@ package com.file_share.nayan.EmailService;
 import java.io.File;
 import java.util.Properties;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import javax.mail.Authenticator;
 import javax.mail.Message;
 import javax.mail.PasswordAuthentication;
@@ -23,6 +25,9 @@ public class SendEmail {
 	
 	private static String shareLink;
 	private static long fileSize;
+	
+	private String EMAIL_ID;
+	private String PASSWORD;
 	
 	
 	public static void setShareLink(String shareLink) {
@@ -57,7 +62,7 @@ public class SendEmail {
 
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("EMAIL_ID", "EMAIL_PASSWORD");
+				return new PasswordAuthentication(EMAIL_ID,PASSWORD);
 			}
 			
 		});
