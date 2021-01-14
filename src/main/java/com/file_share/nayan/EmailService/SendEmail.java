@@ -101,82 +101,9 @@ public class SendEmail {
 		
 	
 		
-	}
+	
 
 	
-	// responsible for send text and file message
-	
-	public static void sendAttacmentMail(String to,String from) {
-		
-		String host ="smtp.gmail.com";
-		
-		Properties properties = System.getProperties();
-		// set host
-		properties.put("mail.smtp.host", host);
-		properties.put("mail.smtp.port", "465");
-		properties.put("mail.smtp.auth", "true");
-		properties.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-		
-		// step 1
-		
-		Session session = Session.getInstance(properties, new Authenticator() {
-
-			@Override
-			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication(from, "nayanjain@9098135928");
-			}
-			
-		});
-		
-		session.setDebug(true);
-		
-		
-		// step 2 compose the message;
-		
-		MimeMessage mimeMessage = new MimeMessage(session);
-		
-		
-		try {
-			
-			mimeMessage.setFrom(from);
-			
-			mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-			
-			mimeMessage.setSubject(subject);
-			
-			
-			// Attachment
-			
-			String path = "C:\\Users\\hp\\Downloads\\New folder\\default.png";
-			
-			MimeMultipart mimeMultipart = new MimeMultipart();
-			
-			MimeBodyPart textMime = new MimeBodyPart();
-			MimeBodyPart fileMime = new MimeBodyPart();
-			
-			File file = new File(path);
-			
-			try {
-				
-				textMime.setText(message);
-				fileMime.attachFile(file);
-				
-				mimeMultipart.addBodyPart(textMime);
-				mimeMultipart.addBodyPart(fileMime);
-				
-				
-				
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			
-			mimeMessage.setContent(mimeMultipart);
-			
-			Transport.send(mimeMessage);
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 		
 	
 		
