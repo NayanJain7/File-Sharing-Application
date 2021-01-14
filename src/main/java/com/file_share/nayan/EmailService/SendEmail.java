@@ -79,7 +79,7 @@ public class SendEmail {
 		
 		try {
 			
-			mimeMessage.setFrom(from);
+			mimeMessage.setFrom(email_id);
 			
 			mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 			
