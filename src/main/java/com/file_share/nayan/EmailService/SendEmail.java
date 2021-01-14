@@ -3,7 +3,7 @@ package com.file_share.nayan.EmailService;
 import java.io.File;
 import java.util.Properties;
 
-import org.springframework.beans.factory.annotation.Value;
+
 
 import javax.mail.Authenticator;
 import javax.mail.Message;
@@ -26,9 +26,9 @@ public class SendEmail {
 	private static String shareLink;
 	private static long fileSize;
 	
-	@Value("${EMAIL_ID}")
+	
 	 static String email_id;
-	@Value("${PASSWORD}")
+	
 	 static String password;
 	
 	
