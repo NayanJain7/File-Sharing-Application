@@ -18,8 +18,8 @@ const maxFileSixe =  100 * 1024 * 1024;
 
 
 
-const uploadUrl = "http://localhost:8080/upload-single-file";
-const emailUrl = "http://localhost:8080/upload-file/send";
+const uploadUrl = "https://share-karo.herokuapp.com/upload-single-file";
+const emailUrl = "https://share-karo.herokuapp.com/upload-file/send";
 
 dropZone.addEventListener("dragover",(e) => {
     
