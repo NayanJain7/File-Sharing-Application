@@ -35,6 +35,10 @@ public class SendEmail {
 	public static void setShareLink(String shareLink) {
 		SendEmail.shareLink = shareLink;
 	}
+	
+	public String showDetails(){
+		return "Email is "+email_id+" Password is "+password;
+	}
 
 
 	public static void setFileSize(long fileSize) {
