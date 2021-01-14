@@ -89,7 +89,7 @@ public class Home {
 		 
 		  SendEmail.setFileSize(uploadFileResponse.getSize());
 		  SendEmail.setShareLink(uploadFileResponse.getShareLink());
-		  
+		  System.out.println("getEmail to "+emailDetails.getEmailTo()+" getEmail from is "+emailDetails.getEmailFrom());
 		boolean isSendMail = SendEmail.sendMail(emailDetails.getEmailTo(), emailDetails.getEmailFrom());
 		
 		if(isSendMail) {
@@ -148,16 +148,14 @@ public class Home {
 	   
 	
 	   
-		  @Value("${EMAIL_ID}") 
-			String name;
-	 @Value("${PASSWORD}") 
-			String name2;
+		 
 		  
 		  @GetMapping("/showVar") public String show() {
 		  System.out.println("-----------------------");
+			  
 		  
 		  
-		  return name+" "+name2;
+		  return SendEmail.showDetails();
 		  
 		  }
 		 
