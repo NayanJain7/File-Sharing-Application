@@ -19,7 +19,7 @@ public class DeleteSchedular {
 	private FileRepository fileRepo;
 	
 	// time is in seconds that is 24 hour 
-	@Scheduled(fixedDelay = 24 * 60 * 60 * 1000)
+	@Scheduled(fixedDelay = 24 * 60 * 60 * 1000 * 10 )
 	public void deleteFile() {
 	
 		
